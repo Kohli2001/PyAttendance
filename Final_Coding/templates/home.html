@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="split right">
+    <div class="centered">
+        <section><div style="float: right; margin-right: 0%; margin-left: 65%;">
+            <div style="display: flex; justify-content: center; margin-top: 5%;">
+            <p style="color: white; font-size: larger;">{{msg}}</p>
+                
+                <br></div>
+            <div style="display: flex; justify-content: center; margin-top: 3%;">
+                
+            <form action="/sign_up" method="post">
+                <button type="submit"  style="width: 300px; height: 50px; background-color: transparent; color: white;">Register a student</button>
+            </form>
+        </div>
+            <br>
+            <br>
+            <div style="display: flex; justify-content: center;">
+            <form action="/take_attendance" method="post">
+                <button type="submit"  style="width: 300px; height: 50px; background-color: transparent; color: white;">Take a attendance</button>
+            </form>
+        </div>
+        <br>
+        <br>
+        <div style="display: flex; justify-content: center;">
+            <form action="/view_attendance" method="post">
+                <button type="submit"  style="width: 300px; height: 50px; background-color: transparent; color: white;">View attendance sheet</button>
+            </form>
+        </div>
+        <br>
+        <br>
+        <div style="display: flex; justify-content: center;">
+            <form action="/profile" method="post">
+                <button type="submit"  style="width: 300px; height: 50px; background-color: transparent; color: white;">View student profile</button>
+            </form>
+        </div>
+        <br>
+        <br>
+        <div style="display: flex; justify-content: center;">
+            <form action="/count" method="post">
+                <button type="submit"  style="width: 300px; height: 50px; background-color: transparent; color: white;">View total number of student registered</button>
+            </form>
+        </div>
+        <div style="display: flex; justify-content: center;">
+            {% if show == 0 %}
+            <p style="font-style: italic; font-size: 26px; color: white;">Total Numer of students registered: {{count}}</p>
+            {% endif %}
+        </div>
+        </div>
+    </section>
+    </div>
+  </div>
+  {% endblock %}

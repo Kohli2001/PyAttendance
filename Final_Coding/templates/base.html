@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PyAttendance</title>
+</head>
+<STYle>
+    header img {
+    height: 80px;
+    margin-left: 40px;
+}
+body {
+    height: 125vh;
+    background-image: url(static/images/vector1.jpg);
+    background-size: cover;
+    font-family: sans-serif;
+    margin-top: 80px;
+    padding: 30px;
+}
+
+main {
+    color: white;
+}
+
+header {
+    background-color: transparent;
+    color: rgb(255, 94, 0);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 25px 0 black;
+}
+
+header * {
+    display: inline;
+}
+
+header li {
+    margin: 20px;
+}
+
+header li a {
+    color: white;
+    text-decoration: none;
+}
+/* Split the screen in half */
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Control the left side */
+.left {
+  left: 0;
+  
+}
+
+/* Control the right side */
+.right {
+  right: 0;
+  
+}
+
+/* If you want the content centered horizontally and vertically */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Style the image inside the centered container, if needed */
+.centered img {
+  width: 150px;
+  border-radius: 50%;
+}
+</STYle>
+<body style="background-image: url(static/images/vector1.jpg);background-repeat: no-repeat; background-size: cover;">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}" style="font-style: Impact; font-weight: bolder; font-size: larger; text-shadow: 2px 2px #f485f8;">PyAttendance</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="split left">
+            <section>
+            <main>
+               <DIV style="margin-left: 10%;margin-top: 30%;">
+              
+               <h1 style="width: 600px; font-size: 35px;">FACE RECOGNITION CLASSROOM BASED ATTENDANCE SYSTEM USING PYTHON AND AI </h1>
+                <p style="width: 500px; float: left; font-size: 25px; font-weight: bold; color: aqua;">by KAKA</p>
+                           
+               </DIV>
+            </main>
+           </section>
+      </div>
+      
+      {% block content %}
+      {% endblock %}
+
+
+    
+     
+</body>
+</html>
